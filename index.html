@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dream Glass</title>
+
+  <meta name="description" content="幻想的なパープル＆ピンクのガラスUIポータル">
+  <meta name="keywords" content="Dream Glass, Glassmorphism, Timer, Notes">
+  <meta name="author" content="washio">
+  <meta name="theme-color" content="#c86bff">
+
+  <!-- OGP -->
+  <meta property="og:title" content="Dream Glass">
+  <meta property="og:description" content="幻想的なパープル＆ピンクのガラスUIポータル">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/meta/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <main class="container">
+
+    <header class="hero glass">
+      <h1>Dream Glass</h1>
+      <p>幻想的なガラスUIポータル</p>
+
+      <div class="clock" id="clock">
+        00:00:00
+      </div>
+    </header>
+
+    <section class="grid">
+
+      <a href="dashboard.html" class="card glass">
+        <h2>Dashboard</h2>
+        <p>毎日の管理</p>
+      </a>
+
+      <a href="timer.html" class="card glass">
+        <h2>Timer</h2>
+        <p>タイマー・ポモドーロ</p>
+      </a>
+
+      <a href="notes.html" class="card glass">
+        <h2>Notes</h2>
+        <p>メモ・アイデア</p>
+      </a>
+
+      <a href="countdown.html" class="card glass">
+        <h2>Countdown</h2>
+        <p>イベント管理</p>
+      </a>
+
+      <a href="themes.html" class="card glass">
+        <h2>Themes</h2>
+        <p>テーマ変更</p>
+      </a>
+
+      <a href="settings.html" class="card glass">
+        <h2>Settings</h2>
+        <p>設定</p>
+      </a>
+
+    </section>
+
+  </main>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+
+      const h = String(now.getHours()).padStart(2, "0");
+      const m = String(now.getMinutes()).padStart(2, "0");
+      const s = String(now.getSeconds()).padStart(2, "0");
+
+      document.getElementById("clock").textContent =
+        `${h}:${m}:${s}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+</body>
+</html>
