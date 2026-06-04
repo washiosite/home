@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Washio Countdown | WashioWeb</title>
+
+<meta name="description" content="WashioWebのカウントダウンアプリ">
+
+<link rel="icon" href="assets/favicon/countdown.svg">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header class="navbar glass">
+
+    <a href="index.html" class="logo">
+        WashioWeb
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="notes.html">Notes</a>
+        <a href="countdown.html">Countdown</a>
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <section class="glass page-header">
+
+        <h1>📅 Washio Countdown</h1>
+
+        <p>
+            大切な日まであと何日？
+        </p>
+
+    </section>
+
+    <section class="glass countdown-form">
+
+        <h2>新しいイベント</h2>
+
+        <input
+            type="text"
+            id="eventName"
+            placeholder="イベント名"
+        >
+
+        <input
+            type="date"
+            id="eventDate"
+        >
+
+        <button id="addEventBtn">
+            追加する
+        </button>
+
+    </section>
+
+    <section>
+
+        <h2 class="section-title">
+            登録済みイベント
+        </h2>
+
+        <div
+            id="countdownList"
+            class="countdown-grid">
+
+            <!-- JSで追加 -->
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/countdown.js"></script>
+
+</body>
+</html>
