@@ -356,3 +356,76 @@ border-radius:12px;
 cursor:pointer;
 
 }
+
+.countdown-form{
+
+    padding:30px;
+    margin-bottom:30px;
+
+}
+
+.countdown-form input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    color:white;
+
+}
+
+.countdown-form button{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#c85cff;
+
+    font-weight:bold;
+
+}
+
+.countdown-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.countdown-card{
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.days{
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+}
