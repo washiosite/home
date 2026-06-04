@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard | WashioWeb</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<header class="navbar glass">
+
+  <a href="index.html" class="logo">
+    WashioWeb
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="timer.html">Timer</a>
+    <a href="notes.html">Notes</a>
+    <a href="countdown.html">Countdown</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+
+</header>
+
+<main class="container">
+
+  <section class="glass page-header">
+    <h1>Dashboard</h1>
+    <p>今日の情報をまとめて確認できます。</p>
+  </section>
+
+  <section class="dashboard-grid">
+
+    <div class="glass widget">
+      <h2>🕒 現在時刻</h2>
+      <div id="clock">00:00:00</div>
+    </div>
+
+    <div class="glass widget">
+      <h2>📝 メモ</h2>
+      <p>最新のメモがここに表示されます。</p>
+    </div>
+
+    <div class="glass widget">
+      <h2>📅 カウントダウン</h2>
+      <p>次のイベントまであと○日</p>
+    </div>
+
+    <div class="glass widget">
+      <h2>🎯 今日の目標</h2>
+      <p>目標を設定しましょう。</p>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+function updateClock() {
+  const now = new Date();
+
+  const h = String(now.getHours()).padStart(2,"0");
+  const m = String(now.getMinutes()).padStart(2,"0");
+  const s = String(now.getSeconds()).padStart(2,"0");
+
+  document.getElementById("clock").textContent =
+    `${h}:${m}:${s}`;
+}
+
+setInterval(updateClock,1000);
+updateClock();
+</script>
+
+</body>
+</html>
